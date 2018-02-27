@@ -43,6 +43,7 @@
 /vivado/*/*.sdk/
 /vivado/*/.Xil/
 /vivado/*/*.log
+/vivado/*/*.str
 /vivado/*/*.jou
 /vivado/*/*.dsa
 /vivado/*/*.zip
