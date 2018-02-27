@@ -1,0 +1,27 @@
+========================================
+Changes made for SDSoC/reVISION support
+========================================
+
+The steps found in the Linux Boot Files section of UG1146 (page 47) were followed to make the 
+Linux system suitable for an SDSoC platform. In addition to these changes, the following changes were
+also made:
+
+1) Imported HDF found in hw_handoff using petalinux-config
+
+2) Instead of modifying the bootargs in the petalinux-config menu, the system-user.dtsi file was modified to include "quiet".
+
+3) Based on references in the ZCU102 revision platform, Instead of the xlnk device tree node cited in ug1146, the following was
+   used (which puts the node in amba):
+
+&amba {
+	xlnk {
+		compatible = "xlnx,xlnk-1.0";
+	};
+};
+
+4) Changed the CMA size to 256 MB using petalinux-config -c kernel 
+
+5) Used petalinux-config -c rootfs to disable packagegroup-buildessential to decrease size and align with default Xilinx SDSoC platforms.
+   Also, it seems like being able to self-host is not as important with SDSoC, which is a cross-compilation environment. 
+
+
