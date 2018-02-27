@@ -1,0 +1,7 @@
+[submodule "linux"]
+	path = linux
+	url = https://github.com/Digilent/Petalinux-Zybo-Z7-20.git
+	branch = sdsoc
+[submodule "sdsoc/zybo_z7_20/resources/samples"]
+	path = sdsoc/zybo_z7_20/resources/samples
+	url = https://github.com/Digilent/sdsoc-samples.git
