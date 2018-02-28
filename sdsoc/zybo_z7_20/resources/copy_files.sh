@@ -17,6 +17,7 @@ rm -rf ./tmp/
 
 cp -f -v ${REPO_DIR}/sdk/hello_rt/src/lscript.ld ./freertos/lscript.ld
 cp -f -v ${REPO_DIR}/linux/${PETALINUX_PROJECT}/images/linux/zynq_fsbl.elf ./freertos/boot/fsbl.elf
+cp -f -v -r ${REPO_DIR}/sdk/hello_rt_bsp/ps7_cortexa9_0/include ./freertos/include
 
 cp -f -v ${REPO_DIR}/sdk/hello_sa/src/lscript.ld ./standalone/lscript.ld
 cp -f -v ${REPO_DIR}/linux/${PETALINUX_PROJECT}/images/linux/zynq_fsbl.elf ./standalone/boot/fsbl.elf
